@@ -1,0 +1,57 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <center>
+        <GridPane alignment="CENTER" gridLinesVisible="false" vgap="5" hgap="5" >
+            <BorderPane.margin>
+                <Insets right="10" ></Insets>
+            </BorderPane.margin>
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"></ColumnConstraints>
+                <ColumnConstraints percentWidth="50"></ColumnConstraints>
+            </columnConstraints>
+
+            <Label fx:id="numberItemsLabel"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="RIGHT">Enter Number of items in this order: </Label>
+            <Label fx:id="itemIdLabel"
+                    GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="RIGHT">Enter item ID for Item #1: </Label>
+            <Label fx:id="quantityLabel"
+                    GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="RIGHT">Enter quantity for Item #1: </Label>
+            <Label fx:id="itemInfoLabel"
+                    GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.halignment="RIGHT">Item #1 info: </Label>
+            <Label fx:id="subtotalLabel"
+                    GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.halignment="RIGHT">Order subtotal for 0 item(s): </Label>
+
+            <TextField fx:id="numberItemsTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"></TextField>
+            <TextField fx:id="itemIdTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"></TextField>
+            <TextField fx:id="quantityTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"></TextField>
+            <TextField fx:id="itemInfoTextField" GridPane.columnIndex="1" GridPane.rowIndex="3"></TextField>
+            <TextField fx:id="subtotalTextField" GridPane.columnIndex="1" GridPane.rowIndex="4"></TextField>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="5">
+            <BorderPane.margin>
+                <Insets bottom="10" ></Insets>
+            </BorderPane.margin>
+
+            <Button fx:id="processItemBtn" onAction="#processItemClicked">Process Item #1</Button>
+            <Button fx:id="confirmItemBtn" disable="true" onAction="#confirmItemClicked">Confirm Item #1</Button>
+            <Button fx:id="viewOrderBtn" disable="true" onAction="#viewOrderClicked">View Order</Button>
+            <Button fx:id="finishOrderBtn" disable="true" onAction="#finishOrderClicked">Finish Order</Button>
+            <Button fx:id="newOrderBtn" onAction="#newOrderClicked">New Order</Button>
+            <Button fx:id="exitBtn" onAction="#exitClicked">Exit</Button>
+        </HBox>
+    </bottom>
+
+
+</BorderPane>

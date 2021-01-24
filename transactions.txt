@@ -1,0 +1,2 @@
+230120212212, 3451, "Oakley Jawbreaker sunglasses", 236.0, 2, 0.0, $472.00, 01/23/21, 10:12:08 PM EST
+230120212212, 23, "Tamiya 2oz paint - ferrari red", 2.39, 5, 10.0, $11.95, 01/23/21, 10:12:14 PM EST
